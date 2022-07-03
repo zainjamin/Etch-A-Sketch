@@ -6,4 +6,4 @@ Made using
 - CSS
 - Javascript
 ## Usage
-Go to my [Github pages](https://zainjamin.github.io/EtchASketch/)
+Go to my [Github pages](https://zainjamin.github.io/Etch-A-Sketch/)
