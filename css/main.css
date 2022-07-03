@@ -10,6 +10,9 @@ h1{
   font-size: 64px;
   text-align: center;
 }
+h2{
+  text-align: center;
+}
 h3{
   color: #8D6EAC;
   font-size: 16px;
@@ -26,7 +29,7 @@ main{
 .container{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .grid{
   background-color: white;
@@ -40,7 +43,16 @@ main{
 .buttons{
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 3vh;
+}
+button{
+  background-color: #8D6EAC;
+  color: white;
+  border: none;
+  font-family: 'Audiowide', cursive;
+  font-size: 16px;
+  border-radius: 16px;
+  padding: 8px 0;
 }
 input[type=range] {
   height: 39px;
