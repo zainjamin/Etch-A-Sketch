@@ -1,11 +1,27 @@
 const grid = document.querySelector(".grid");
 const sizeText = document.querySelector("h3");
 const sizeSlider = document.querySelector("input");
+const blackButton = document.querySelector('#black');
+const rainbowButton = document.querySelector('#rainbow');
+const clearButton = document.querySelector('#clear');
 let size = 16;
+let color = 'black';
+
+const setColor = (evt) => {
+  color = evt.currentTarget.id;
+};
 
 const colorSquare = (event) => {
   const square = event.currentTarget;
-  square.style.backgroundColor = 'black';
+  if(color === 'rainbow'){
+    const red = Math.floor(Math.random()*256);
+    const blue = Math.floor(Math.random()*256);
+    const green = Math.floor(Math.random()*256);
+    square.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  }
+  else{
+    square.style.backgroundColor = color;
+  }
 };
 
 const createGrid = () => {
@@ -20,6 +36,11 @@ const createGrid = () => {
     grid.appendChild(square);
   }
 };
+
+blackButton.addEventListener('click', setColor);
+rainbowButton.addEventListener('click', setColor);
+clearButton.addEventListener('click', createGrid);
+
 
 sizeSlider.oninput = function () {
   sizeText.textContent = `${this.value}x${this.value}`;

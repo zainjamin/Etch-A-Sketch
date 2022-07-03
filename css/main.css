@@ -54,6 +54,12 @@ button{
   border-radius: 16px;
   padding: 8px 0;
 }
+#black:focus, #rainbow:focus{
+  background-color: #4A2C69;
+}
+#clear:focus:active{
+  background-color: #4A2C69;
+}
 input[type=range] {
   height: 39px;
   -webkit-appearance: none;
